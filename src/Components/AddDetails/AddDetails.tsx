@@ -31,7 +31,7 @@ const AddDetails = () => {
   const dispatch = useDispatch();
 
   const totalCertificateCount = useSelector(
-    (state) => state.details.totalFileUploaded
+    (state:any) => state.details.totalFileUploaded
   );
 
   const onChangeHandler: (e: any) => void = (e) => {
@@ -62,7 +62,7 @@ const AddDetails = () => {
       file: !formValues.file,
     };
     setErrors(newErrors);
-    
+
     if (totalCertificateCount >= 5) {
       alert("5 Certificates added. Cannot add more!!");
       return
@@ -72,7 +72,7 @@ const AddDetails = () => {
       return;
     }
 
-    if (!validFileTypes.includes(formValues.file.type)) {
+    if (!validFileTypes.includes((formValues.file as File).type)) {
       alert("File format should be PDF or JPG only");
       return;
     }

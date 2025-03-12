@@ -3,8 +3,8 @@ import "./Results.css";
 import { useSelector } from "react-redux";
 
 const Results = () => {
-  const data = useSelector((state) => state.details);
-  const result = data.certificates.map((curr: any) => curr);
+  const data = useSelector((state:any) => state.details);
+  const result = data.certificates.map((curr: unknown) => curr);
 
   const viewCertificate: (i: number) => void = (i) => {
     const blobFile = data.certificates[i].file
@@ -15,7 +15,7 @@ const Results = () => {
   return (
     <>
       {data.totalFileUploaded > 0 &&
-        result.map((curr, i: number) => {
+        result.map((curr:any, i: number) => {
           return (
             <Container className="results">
               <Container className="result">
