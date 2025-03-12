@@ -1,0 +1,42 @@
+.results {
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100px;
+  border-radius: 20px;
+  justify-content: center;
+}
+.result {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.total__count {
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  color: white;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: #0d6efd;
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+.certification {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.issuer {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(128, 125, 125);
+}
